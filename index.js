@@ -34,8 +34,7 @@ const lnameInput = document.querySelector('#lname');
     parentInput.value = "";
     phoneInput.value = "";
     dobInput.value = "";
-    // console.log(lname);
-    // if(lname!=null&&fname!=null&&city!=null&&dob!=null&&address!=null&&phone!=null&&Parent_name!=null){
+   
     fetch('http://localhost:3000/insert', {
                 headers: {
                     'Content-type': 'application/json'
@@ -52,11 +51,10 @@ const lnameInput = document.querySelector('#lname');
             })
             .then(response => response.json())
             .then(data => insertRowIntoTable(data['data']));
-        // }
 }
 
 function insertRowIntoTable(data) {
-    console.log("ROW-------------------------"+data);
+    // console.log("ROW-------------------------"+data);
     const table = document.querySelector('table tbody');
     const isTableData = table.querySelector('.no-data');
 
