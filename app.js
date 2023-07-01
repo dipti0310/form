@@ -38,4 +38,4 @@ app.get('/getAll',(request,response)=>{
 })
 
 
-app.listen(3000,()=>console.log('app is running'));
+app.listen(process.env.PORT,()=>console.log('app is running'));
