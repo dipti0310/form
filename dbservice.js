@@ -29,8 +29,12 @@ class DbService {
                 const query = "SELECT * FROM student_details;";
 
                 connection.query(query, (err, results) => {
-                    if (err) reject(new Error(err.message));
-                    resolve(results);
+                    // if (err) reject(new Error(err.message));
+                    // resolve(results);
+                      if(err)
+                    console.log(err);
+                    else
+                    console.log(results)
                 })
             });
             console.log("DB**********************************"+response);
